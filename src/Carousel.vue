@@ -1,10 +1,10 @@
 <template>
   <section class="VueCarousel">
-    <div 
+    <div
       class="VueCarousel-wrapper"
       ref="VueCarousel-wrapper"
     >
-      <div 
+      <div
         ref="VueCarousel-inner"
         :class="[
           'VueCarousel-inner',
@@ -26,12 +26,12 @@
       </div>
     </div>
 
-    <pagination 
+    <pagination
       v-if="paginationEnabled"
       @paginationclick="goToPage($event, 'pagination')"
     />
 
-    <navigation 
+    <navigation
       v-if="navigationEnabled && isNavigationRequired"
       :clickTargetSize="navigationClickTargetSize"
       :nextLabel="navigationNextLabel"
@@ -776,7 +776,7 @@ export default {
 .VueCarousel-wrapper {
   width: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: inherit;
 }
 
 .VueCarousel-inner {
